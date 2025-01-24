@@ -23,6 +23,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 33
+    namespace project.findProperty("namespace") ?: "com.default.namespace"
 
     defaultConfig {
         minSdkVersion 16
@@ -31,4 +32,5 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+    
 }
